@@ -1,6 +1,5 @@
 name: tamirastesting
-
-on:
+on: 
   push:
     branches:
       - main
@@ -15,17 +14,11 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
       - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: "16" # or your project’s Node version
-
+        uses: actions/Setup-node@v3
       - name: Install dependencies
         run: npm install
-
       - name: Run tests
         run: npm run test
-
-      - name: Build project
+      - name: run build
         run: npm run build
