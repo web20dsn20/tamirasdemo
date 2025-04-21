@@ -12,17 +12,17 @@ jobs:
     runs-on: ubuntu-latest
 
   steps:
-    - name: checkout code
+    - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: set up nodejs
+    - name: Set up nodejs
       uses: actions/setup_node@v3
 
-    - name: install dependencies
+    - name: Install dependencies
       run: npm install
 
-    - name: run testscode
+    - name: Run tests
       run: npm run test
 
-    - name: build project
+    - name: Build project
       run: npm run build
