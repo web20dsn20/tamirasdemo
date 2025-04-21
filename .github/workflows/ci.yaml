@@ -19,9 +19,10 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Run tests
-        run: npm run test
+        run: npm run test  -- --watchAll=false
       - name: run build
         run: npm run build
+        
       - name: Upload production build (optional)
         uses: actions/upload-artifact@v3
         with:
